@@ -47,3 +47,28 @@
 .mega_menu__top-item:hover .mega_menu__drop-down {
   display: inherit;
 }
+
+.mega_menu__drop2 {
+  padding: 0.5rem 1rem;
+  width: 220px;
+  &:hover {
+    background-color: #003366;
+    color: white;
+  }
+}
+
+.mega_menu__drop-down2 {
+  // properties & hidden;
+  display: none;
+  position: absolute;
+  left: 220px;
+  top: 0px;
+  right: 0px;
+  height: 400px;
+  background-color: lightskyblue;
+}
+
+.mega_menu__drop2:hover .mega_menu__drop-down2 {
+  // properties & hidden;
+  display: block;
+}
