@@ -1,0 +1,45 @@
+[{
+    "id": "medicines",
+    "label": "Medicines"
+  },
+  {
+    "id": "healthcare",
+    "label": "Healthcare"
+  },
+  {
+    "id": "mother-and-baby",
+    "label": "Mother & Baby"
+  },
+  {
+    "id": "vitamins-supplements",
+    "label": "Vitamins"
+  },
+  {
+    "id": "toiletries",
+    "label": "Toiletries"
+  },
+  {
+    "id": "winter-shop",
+    "label": "Winter Shop"
+  },
+  {
+    "id": "skin-care",
+    "label": "Skincare"
+  },
+  {
+    "id": "for-men",
+    "label": "For Men"
+  },
+  {
+    "id": "pets",
+    "label": "Pets"
+  },
+  {
+    "id": "offers",
+    "label": "Offers"
+  },
+  {
+    "id": "prescriptions",
+    "label": "Prescriptions"
+  }
+]
