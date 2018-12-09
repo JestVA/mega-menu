@@ -15,7 +15,7 @@ html(lang="en")
                     h2=menu.label
                     ul
                       each menu2, key2 in menu.secondMenuItemList
-                        li.mega_menu__drop2
+                        li.mega_menu__drop2(data-key1=key1, data-key2=key2)
                           span=menu2.label
                           .mega_menu__drop-down2
                             h3=menu2.label
@@ -28,3 +28,27 @@ html(lang="en")
                                 each item in menu2.list2
                                   //- li.last-li
                                   //-   a(href=item.link, class=item.bold?'bold-link':'')=item.label
+      script.
+        let menu = !{JSON.stringify(data.menu)}
+        document.querySelectorAll('.mega_menu__drop2')
+            .forEach(mm => mm.addEventListener('mouseover', elem => {
+              const { key1, key2 } = elem.currentTarget.dataset;
+              let list1 = mm.querySelector('.mega_menu__drop-down2 .list-1')
+              //- console.log(elem.currentTarget.dataset);
+              //- console.log(key1, key2, list1)
+              list1.innerHTML = '';
+              if (menu[key1].secondMenuItemList[key2].list1) {
+                menu[key1].secondMenuItemList[key2].list1.map(data => {
+                    let liItem = document.createElement('li');
+                    liItem.className = 'last-li';
+                    let atag = document.createElement('a'); 
+                    atag.href = data.link;
+                    atag.innerText = data.label;
+                    atag.className = data.bold ? 'bold-link' : ''
+                    liItem.appendChild(atag);
+                    list1.appendChild(liItem);
+                })
+              }
+              //- console.log(elem.target); 
+              //- console.log('********');
+            }))
