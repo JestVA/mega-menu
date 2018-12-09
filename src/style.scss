@@ -1,0 +1,49 @@
+// reset CSS
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+
+}
+
+
+.mega__menu {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+
+  & > div {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+}
+
+.mega_menu__top-link {
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: lightblue;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+
+  &:hover {
+    background-color: darkblue;
+    color: white;
+  }
+}
+
+.mega_menu__drop-down {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background-color: #f2f2f2;
+}
+
+.mega_menu__top-item:hover .mega_menu__drop-down {
+  display: inherit;
+}

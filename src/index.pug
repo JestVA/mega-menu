@@ -5,8 +5,15 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Practice with mega menu and Javascript
+    link(href='style.css' rel='stylesheet')
   body
-      ul
-          each menu in data.menu
-              li
-                  a(href=`/${menu.id}`)=menu.label
+      .mega__menu
+          each menu, key1 in data.menu
+              .mega_menu__top-item
+                  a.mega_menu__top-link(href=`/${menu.id}`)=menu.label
+                  .mega_menu__drop-down
+                    h2=menu.label
+                    ul
+                      each menu2 in menu.secondMenuItemList
+                        li
+                          span=menu2.label
