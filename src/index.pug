@@ -18,5 +18,13 @@ html(lang="en")
                         li.mega_menu__drop2
                           span=menu2.label
                           .mega_menu__drop-down2
-                            p aaa
-                            p=key2
+                            h3=menu2.label
+                            .list
+                              ul.list-1
+                                each item in menu2.list1
+                                  li.last-li
+                                    a(href=item.link, class=item.bold?'bold-link':'')=item.label
+                              ul.list-2
+                                each item in menu2.list2
+                                  li.last-li
+                                    a(href=item.link, class=item.bold?'bold-link':'')=item.label

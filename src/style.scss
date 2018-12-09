@@ -72,3 +72,18 @@
   // properties & hidden;
   display: block;
 }
+
+.bold-link {
+  color: green;
+  font-weight: bold;
+}
+
+.last-li a {
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  display: block;
+}
+
+.list {
+  display: flex;
+}
